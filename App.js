@@ -13,7 +13,7 @@ export default function App() {
 
   return (
   <NavigationContainer>
-    <Stack.Navigator initialRouteName="cadastro">
+    <Stack.Navigator initialRouteName="login">
       <Stack.Screen
         name="cadastro"
         component={Cadastro}
@@ -25,15 +25,8 @@ export default function App() {
         name="login"
         component={Login}
         options={{
-            title: "Território 2",
-            headerStyle: { backgroundColor: "#FFE4A6" },
-            headerTintColor: "#8D6E63",
-            headerTitleAlign: 'center',
-            headerTitleStyle: {
-              fontSize: 35,
-              fontFamily: 'Fredoka_600SemiBold',
-            },
-          }}
+          headerShown: false,
+        }}
       />
     </Stack.Navigator>
   </NavigationContainer>
