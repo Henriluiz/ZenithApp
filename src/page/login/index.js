@@ -16,11 +16,13 @@ export default function Login() {
 
     return (
         <View style={styles.container}>
-            <View style={{alignItems: "center"}}>
+            {/* Flex:  1 */}
+            <View style={styles.containerLogo}>
                 <Image
                     style={styles.logo}
                     source={require('./img/logo.png')}/>
             </View>
+            {/* Flex: 2 */}
             <View style={styles.container2}>
 
                 <Text style={styles.titulo}>QUE BOM TER VOCÊ DE VOLTA!</Text>
@@ -37,7 +39,7 @@ export default function Login() {
                                 onChangeText={SetEmail}
                                 value={email}
                                 keyboardType="email"
-                                underlineColorAndroid="transparent"
+                                underlineColorAndroid="transparent" // Remove aquela linha em baixo das palavras, enquanto escrevemos!
                             />
                         </View>
                     </View>
@@ -50,7 +52,7 @@ export default function Login() {
                                 onChangeText={SetEmail}
                                 value={email}
                                 keyboardType="email"
-                                underlineColorAndroid="transparent"
+                                underlineColorAndroid="transparent" // Remove aquela linha em baixo das palavras, enquanto escrevemos!
                             />
                         </View>
                         <Pressable onPress={() => esqueceu_senha('login')}>
@@ -63,7 +65,7 @@ export default function Login() {
                 {/* Início do botão */}
                 <View style={styles.contEntra}>
                     <View style={styles.botaoEntra}>
-                        <Pressable onPress={() => enviar('login')} style={{display: "flex", flexDirection: "row", justifyContent: "space-between", paddingRight: 50,}}>
+                        <Pressable onPress={() => enviar('login')} style={styles.stylesButton}>
                             <Text style={styles.entrarText}>Entrar</Text>
                             <View>
                                 <ImageBackground style={styles.imgfSeta} source={require('./img/fundoIcone.png')}/>
@@ -72,10 +74,11 @@ export default function Login() {
                         </Pressable>
                     </View>
                     <View style={styles.contaNova}>
-                        <Text style={{color: "rgba(255, 255, 255, 1)", fontSize: 17,}}>É novo por aqui? </Text>
-                        <Text style={{color: "rgba(255, 255, 255, 1)", fontSize: 17,textDecorationLine: "underline", fontWeight: "bold"}}>Cadastre-se</Text>
+                        <Text style={styles.textCadastre}>É novo por aqui? </Text>
+                        <Text style={styles.linkCadastre}>Cadastre-se</Text>
                     </View>
                 </View>
+                {/*Final do botão*/}
 
             </View>
         </View>

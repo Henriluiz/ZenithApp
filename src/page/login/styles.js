@@ -15,6 +15,11 @@ export default StyleSheet.create ({
         alignItems: "center"
     },
 
+    
+    containerLogo: {
+        alignItems: "center"
+    },
+
     // Flex : 2
 
     container2: {
@@ -103,10 +108,29 @@ export default StyleSheet.create ({
         marginLeft: 13
     },
 
+    stylesButton: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingRight: 50,
+    },
+
     contaNova: {
         display: "flex",
         flexDirection: "row",
         margin: "auto",
     },
     
+    textCadastre: {
+        color: "rgba(255, 255, 255, 1)",
+        fontSize: 17,
+    },
+
+    linkCadastre: {
+        color: "rgba(255, 255, 255, 1)",
+        fontSize: 17,
+        textDecorationLine: "underline", 
+        fontWeight: "bold"
+    },
+
 });
