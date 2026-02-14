@@ -23,7 +23,6 @@ export default function App() {
         component={Splash}
         options={{
           headerShown: false,
-          headerBackButtonDisplayMode
         }}
       />
       <Stack.Screen
