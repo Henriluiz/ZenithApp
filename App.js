@@ -4,8 +4,12 @@ import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import Splash from "./src/page/splash";
 import Cadastro from "./src/page/cadastro";
 import Login from "./src/page/login";
+import DadoPessoal  from "./src/page/dadoPessoal";
+import DadoConta from "./src/page/dadoConta";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +17,15 @@ export default function App() {
 
   return (
   <NavigationContainer>
-    <Stack.Navigator initialRouteName="login">
+    <Stack.Navigator initialRouteName="splash">
+      <Stack.Screen
+        name="splash"
+        component={Splash}
+        options={{
+          headerShown: false,
+          headerBackButtonDisplayMode
+        }}
+      />
       <Stack.Screen
         name="cadastro"
         component={Cadastro}
